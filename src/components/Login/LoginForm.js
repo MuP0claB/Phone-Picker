@@ -5,7 +5,7 @@ import styles from "./LoginForm.module.css";
 const LoginForm = () => {
   return (
     <div className="container">
-      <form className={styles.form}>
+      <form className={styles['login-form']}>
         <div>
           <label htmlFor="email">E-mail Address</label>
           <input type="email" id="email" />
