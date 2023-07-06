@@ -1,5 +1,5 @@
 {
-  "name": "maemo-5",
+  "name": "phone-picker",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
