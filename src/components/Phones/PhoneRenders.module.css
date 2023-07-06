@@ -3,9 +3,13 @@
   justify-content: space-around;
 }
 
-.elements ul li a {
+.elements ul li {
   color: #044599;
   font-size: 28px;
+  text-align: center;
   transition: 0.2s;
 }
 
+.elements ul li p {
+  background-color: white;
+}

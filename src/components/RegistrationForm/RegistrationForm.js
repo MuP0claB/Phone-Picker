@@ -1,37 +1,30 @@
 import { NavLink } from "react-router-dom";
-import Card from '../Card/Card';
+import Card from "../Card/Card";
 
 import styles from "./RegistrationForm.module.css";
 
 const RegistrationForm = () => {
   return (
     <Card>
-      <form className={styles.input}>
+      <form className={styles.form}>
         <div>
           <label htmlFor="first">First Name</label>
-          <input type="text" id="first" placeholder="Enter your first name" />
+          <input type="text" id="first" />
         </div>
         <div>
           <label htmlFor="name">Last Name</label>
-          <input type="text" id="name" placeholder="Enter your last name" />
+          <input type="text" id="name" />
         </div>
         <div>
           <label htmlFor="email">E-mail Address</label>
-          <input type="email" id="email" placeholder="Enter your e-mail" />
+          <input type="email" id="email" />
         </div>
         <div>
           <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            placeholder="Create your password"
-          />
+          <input type="password" id="password" />
         </div>
-        <div className={styles.btns}>
-          <button className={styles.btn_register}>REGISTER</button>
-          <NavLink className={styles.back_button} to="/welcome">
-            BACK TO HOME
-          </NavLink>
+        <div className={styles.btn}>
+          <NavLink to='/phones'>REGISTER</NavLink>
         </div>
       </form>
     </Card>
