@@ -23,6 +23,10 @@ const RegistrationForm = () => {
           <label htmlFor="password">Password</label>
           <input type="password" id="password" />
         </div>
+        <div>
+          <label htmlFor="password">Confirm Password</label>
+          <input type="password" id="password" />
+        </div>
         <div className={styles.btn}>
           <NavLink to='/phones'>REGISTER</NavLink>
         </div>

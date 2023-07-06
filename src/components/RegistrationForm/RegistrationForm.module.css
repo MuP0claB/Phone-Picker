@@ -11,6 +11,7 @@
 .form label {
   display: block;
   font-weight: bold;
+  font-size: 24px;
   margin-bottom: 0.5rem;
 }
 
@@ -27,6 +28,11 @@
 .form input:focus {
   outline: none;
   border-color: #4f005f;
+}
+
+.form input:hover {
+  background-color: lightblue;
+  transition: 0.3s;
 }
 
 .btn {

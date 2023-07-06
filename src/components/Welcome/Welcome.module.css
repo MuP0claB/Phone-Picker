@@ -3,6 +3,10 @@
   justify-content: space-around;
 }
 
+.box p {
+  font-size: 24px;
+}
+
 .nav_register {
   background-color: #044599;
   color: white;
