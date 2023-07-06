@@ -42,7 +42,7 @@ const Header = () => {
                   }
                   to="/registration"
                 >
-                  LOGIN
+                  SIGN IN
                 </NavLink>
               </li>
             </ul>
