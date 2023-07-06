@@ -4,6 +4,12 @@
 
 .about .about__info {
     flex: 0 0 30%;
+    background-color: rgb(174, 196, 238);
+}
+
+.about .about__info p {
+    padding: 10px 15px;
+    font-size: 28px;
 }
 
 .about .about__contacts {
