@@ -3,7 +3,9 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import WelcomePage from "./pages/WelcomePage";
 import AboutPage from "./pages/AboutPage";
 import RegistrationPage from "./pages/RegistrationPage";
+import SuccessfullRegPage from "./pages/SuccessfullRegPage";
 import PhonesPage from "./pages/PhonesPage";
+
 import Header from "./components/Header/Header";
 
 function App() {
@@ -17,6 +19,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/registration" element={<RegistrationPage />} />
           <Route path="/phones" element={<PhonesPage />} />
+          <Route path="/successfull" element={<SuccessfullRegPage />} />
         </Routes>
       </main>
     </div>

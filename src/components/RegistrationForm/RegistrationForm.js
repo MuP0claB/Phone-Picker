@@ -28,7 +28,7 @@ const RegistrationForm = () => {
           <input type="password" id="password" />
         </div>
         <div className={styles.btn}>
-          <NavLink to='/phones'>REGISTER</NavLink>
+          <NavLink to="/successfull">REGISTER</NavLink>
         </div>
       </form>
     </Card>
