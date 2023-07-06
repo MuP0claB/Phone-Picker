@@ -1,13 +1,11 @@
-.elements {
+.elements ul {
   display: flex;
   justify-content: space-around;
-  list-style: none;
-  margin: 15px;
 }
 
-.thumbnail {
-  width: 100%;
-  border-style: solid;
-  border-color: #044599;
-  border-radius: 25px;
+.elements ul li a {
+  color: #044599;
+  font-size: 28px;
+  transition: 0.2s;
 }
+
