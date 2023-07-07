@@ -9,15 +9,16 @@ const RegistrationForm = () => {
       <form className={styles.form}>
         <h1>SIGN UP</h1>
         <div>
-          <label htmlFor="email">E-mail Address</label>
+          <label htmlFor="email">Your E-mail</label>
           <input type="email" id="email" />
         </div>
         <div>
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Your Password</label>
           <input type="password" id="password" />
         </div>
         <div className={styles.btn}>
-          <NavLink to="/successfull">CREATE ACCOUNT</NavLink>
+          <button type="button">CREATE ACCOUNT</button>
+          <button type="button" className={styles.toggle}>LOGIN WITH EXISTING ACCOUNT</button>
         </div>
       </form>
     </Card>
