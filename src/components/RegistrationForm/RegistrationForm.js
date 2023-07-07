@@ -7,14 +7,7 @@ const RegistrationForm = () => {
   return (
     <Card>
       <form className={styles.form}>
-        <div>
-          <label htmlFor="first">First Name</label>
-          <input type="text" id="first" />
-        </div>
-        <div>
-          <label htmlFor="name">Last Name</label>
-          <input type="text" id="name" />
-        </div>
+        <h1>SIGN UP</h1>
         <div>
           <label htmlFor="email">E-mail Address</label>
           <input type="email" id="email" />
@@ -23,12 +16,8 @@ const RegistrationForm = () => {
           <label htmlFor="password">Password</label>
           <input type="password" id="password" />
         </div>
-        <div>
-          <label htmlFor="password">Confirm Password</label>
-          <input type="password" id="password" />
-        </div>
         <div className={styles.btn}>
-          <NavLink to="/successfull">REGISTER</NavLink>
+          <NavLink to="/successfull">CREATE ACCOUNT</NavLink>
         </div>
       </form>
     </Card>
