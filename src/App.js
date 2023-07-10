@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import WelcomePage from "./pages/WelcomePage";
@@ -7,8 +8,11 @@ import LoginPage from "./pages/LoginPage";
 import PhonesPage from "./pages/PhonesPage";
 
 import Header from './components/Layout/Header/Header';
+import AuthContext from "./store/auth-context";
 
 function App() {
+ const authCtx = useContext(AuthContext);
+
   return (
     <div>
       <Header />

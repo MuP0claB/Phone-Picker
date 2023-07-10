@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import AuthContext from "../../store/auth-context";
 
 import styles from "./LoginForm.module.css";
 
 const LoginForm = () => {
+  const authCtx = useContext(AuthContext);
+
   return (
     <div className="container">
       <form className={styles['login-form']}>
