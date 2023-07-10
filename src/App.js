@@ -6,7 +6,7 @@ import RegistrationPage from "./pages/RegistrationPage";
 import LoginPage from "./pages/LoginPage";
 import PhonesPage from "./pages/PhonesPage";
 
-import Header from "./components/Header/Header";
+import Header from './components/Layout/Header/Header';
 
 function App() {
   return (
