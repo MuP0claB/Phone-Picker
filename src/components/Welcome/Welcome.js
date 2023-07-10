@@ -5,7 +5,9 @@ const Welcome = () => {
   return (
     <div className={styles.box}>
       <p>WANNA TAKE A LOOK AT OUR GREAT OFFERS ?</p>
-      <NavLink to='/registration' className={styles.nav_register}>REGISTER HERE 👇🏽</NavLink>
+      <NavLink to="/login" className={styles.nav_register}>
+        REGISTER HERE 👇🏽
+      </NavLink>
     </div>
   );
 };

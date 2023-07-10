@@ -1,31 +1,15 @@
-import { NavLink } from "react-router-dom";
 import Card from "../Card/Card";
-
-import { useContext } from "react";
-import AuthContext from "../../store/auth-context";
 
 import styles from "./RegistrationForm.module.css";
 
 const RegistrationForm = () => {
-  const authCtx = useContext(AuthContext);
 
   return (
     <Card>
-      {/* <form className={styles.form}>
+      <form className={styles.form}>
         <h1>SIGN UP</h1>
-        <div>
-          <label htmlFor="email">Your E-mail</label>
-          <input type="email" id="email" />
-        </div>
-        <div>
-          <label htmlFor="password">Your Password</label>
-          <input type="password" id="password" />
-        </div>
-        <div className={styles.btn}>
-          <button type="button">CREATE ACCOUNT</button>
-          <button type="button" className={styles.toggle}>LOGIN WITH EXISTING ACCOUNT</button>
-        </div>
-      </form> */}
+       
+      </form>
     </Card>
   );
 };
