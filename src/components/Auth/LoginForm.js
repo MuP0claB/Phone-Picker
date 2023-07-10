@@ -11,7 +11,7 @@ const LoginForm = () => {
 
   const authCtx = useContext(AuthContext);
 
-  const [isReg, setIsReg] = useState();
+  const [isReg, setIsReg] = useState(true);
 
   const switchHandler = () => {
     setIsReg((prevState) => !prevState);
@@ -28,11 +28,15 @@ const LoginForm = () => {
       <form className={styles.form} onSubmit={submitHandler}>
         <h1>{isReg ? "LOGIN" : "SIGN UP"}</h1>
         <div>
-          <label htmlFor="email">Your E-mail</label>
+          <label htmlFor="email">
+            {isReg ? "Your E-mail" : "Enter E-mail"}
+          </label>
           <input type="email" id="email" required ref={emailInputRef} />
         </div>
         <div>
-          <label htmlFor="password">Your Password</label>
+          <label htmlFor="password">
+            {isReg ? "Your Password" : "Enter Password"}
+          </label>
           <input
             type="password"
             id="password"
@@ -41,9 +45,13 @@ const LoginForm = () => {
           />
         </div>
         <div className={styles.btn}>
-          <button type="submit">CREATE ACCOUNT</button>
-          <button type="button" className={styles.toggle}>
-            {isReg ? "LOGIN WITH EXISTING ACCOUNT" : "REGISTER"}
+          <button type="submit">{isReg ? "LOGIN" : "CREATE ACCOUNT"}</button>
+          <button
+            type="button"
+            className={styles.toggle}
+            onClick={switchHandler}
+          >
+            {!isReg ? "LOGIN WITH EXISTING ACCOUNT" : "REGISTER"}
           </button>
         </div>
       </form>

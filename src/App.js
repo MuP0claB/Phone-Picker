@@ -7,11 +7,11 @@ import RegistrationPage from "./pages/RegistrationPage";
 import LoginPage from "./pages/LoginPage";
 import PhonesPage from "./pages/PhonesPage";
 
-import Header from './components/Layout/Header/Header';
+import Header from "./components/Layout/Header/Header";
 import AuthContext from "./store/auth-context";
 
 function App() {
- const authCtx = useContext(AuthContext);
+  const authCtx = useContext(AuthContext);
 
   return (
     <div>
@@ -22,7 +22,11 @@ function App() {
           <Route path="/welcome/*" element={<WelcomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/registration" element={<RegistrationPage />} />
-          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/login"
+            element={!authCtx.isLoggedIn && <LoginPage />}
+            elements={authCtx.isLoggedIn && <Navigate to="/phones" />}
+          />
           <Route path="/phones" element={<PhonesPage />} />
         </Routes>
       </main>

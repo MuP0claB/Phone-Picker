@@ -19,36 +19,42 @@ const Header = () => {
           </div>
           <nav className={styles.nav}>
             <ul>
-              <li>
-                <NavLink
-                  className={(navData) =>
-                    navData.isActive ? styles.active : ""
-                  }
-                  to="/about"
-                >
-                  ABOUT
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className={(navData) =>
-                    navData.isActive ? styles.active : ""
-                  }
-                  to="/phones"
-                >
-                  PRODUCTS
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  className={(navData) =>
-                    navData.isActive ? styles.active : ""
-                  }
-                  to="/login"
-                >
-                  LOGIN
-                </NavLink>
-              </li>
+              {authCtx.isLoggedIn && (
+                <li>
+                  <NavLink
+                    className={(navData) =>
+                      navData.isActive ? styles.active : ""
+                    }
+                    to="/about"
+                  >
+                    ABOUT
+                  </NavLink>
+                </li>
+              )}
+              {authCtx.isLoggedIn && (
+                <li>
+                  <NavLink
+                    className={(navData) =>
+                      navData.isActive ? styles.active : ""
+                    }
+                    to="/phones"
+                  >
+                    PRODUCTS
+                  </NavLink>
+                </li>
+              )}
+              {!authCtx.isLoggedIn && (
+                <li>
+                  <NavLink
+                    className={(navData) =>
+                      navData.isActive ? styles.active : ""
+                    }
+                    to="/login"
+                  >
+                    LOG IN
+                  </NavLink>
+                </li>
+              )}
             </ul>
           </nav>
         </div>
