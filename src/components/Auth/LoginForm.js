@@ -1,37 +1,46 @@
+import { useContext, useState } from "react";
 import Card from "../Card/Card";
-
-import { useContext, useRef, useState } from "react";
 import AuthContext from "../../store/auth-context";
 
 import styles from "./LoginForm.module.css";
 
 const LoginForm = () => {
-  const emailInputRef = useRef();
-  const passwordInputRef = useRef();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
   const authCtx = useContext(AuthContext);
 
-  const [isReg, setIsReg] = useState(true);
+  const [isReg, setIsReg] = useState(false);
 
-  const switchHandler = () => {
-    setIsReg((prevState) => !prevState);
+  const createAccHandler = (event) => {
+    event.preventDefault();
+    
+    localStorage.setItem("email", email);
+    localStorage.setItem("pass", password);
+
+    const emailToken = localStorage.getItem("email");
+    const passToken = localStorage.getItem("pass");
+
+    console.log(emailToken, passToken);
   };
 
-  const submitHandler = (event) => {
-    event.preventDefault();
-    const enteredEmail = emailInputRef.current.value;
-    const enteredpassword = passwordInputRef.current.value;
+  const emailHandler = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const passHandler = (e) => {
+     setPassword(e.target.value);
   };
 
   return (
     <Card>
-      <form className={styles.form} onSubmit={submitHandler}>
+      <form className={styles.form} onSubmit={createAccHandler}>
         <h1>{isReg ? "LOGIN" : "SIGN UP"}</h1>
         <div>
           <label htmlFor="email">
             {isReg ? "Your E-mail" : "Enter E-mail"}
           </label>
-          <input type="email" id="email" required ref={emailInputRef} />
+          <input type="email" id="email" onChange={emailHandler} />
         </div>
         <div>
           <label htmlFor="password">
@@ -40,19 +49,11 @@ const LoginForm = () => {
           <input
             type="password"
             id="password"
-            required
-            ref={passwordInputRef}
+            onChange={passHandler}
           />
         </div>
         <div className={styles.btn}>
-          <button type="submit">{isReg ? "LOGIN" : "CREATE ACCOUNT"}</button>
-          <button
-            type="button"
-            className={styles.toggle}
-            onClick={switchHandler}
-          >
-            {!isReg ? "LOGIN WITH EXISTING ACCOUNT" : "REGISTER"}
-          </button>
+          <button type="submit">{isReg ? "LOGIN" : "REGISTER"}</button>
         </div>
       </form>
     </Card>

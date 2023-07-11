@@ -41,7 +41,8 @@
 }
 
 .btn {
-  margin-top: 1.5rem;
+  margin-top: 5.8rem;
+  margin-bottom: 1.5rem;;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,18 +59,4 @@
 .btn button:hover {
   opacity: 0.8;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-.btn .toggle {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  background-color: transparent;
-  border: none;
-  color: #044599;
-  padding: 0.15rem 1.5rem;
-}
-
-.btn .toggle:hover {
-  background-color: transparent;
-  color: #044599;
 }
