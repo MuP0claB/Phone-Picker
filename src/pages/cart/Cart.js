@@ -1,4 +1,4 @@
-import "./Cart.module.css";
+import "./Cart.css";
 
 const Cart = () => {
   return <div>Cart</div>;
