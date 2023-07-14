@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
-import finder_logo from "../../../articles/Phone-Finder.png";
+import finder_logo from "../../../assets/Phone-Finder.png";
 
 import styles from "./Header.module.css";
 import AuthContext from "../../../store/auth-context";

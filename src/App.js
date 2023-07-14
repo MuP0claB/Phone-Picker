@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import AuthContext from "./store/auth-context";
+import AuthContext from "./context/auth-context";
 import NavBar from "./components/Layout/NavBar/NavBar";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" />
-          <Route path="/cart" element={<CartPage />} />
+          <Route path="/cart" />
         </Routes>
       </main>
     </div>
