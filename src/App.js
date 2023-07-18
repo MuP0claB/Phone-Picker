@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { React } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import ShopContext from "./context/shop-context";
@@ -7,7 +7,6 @@ import Cart from "./pages/cart/cart";
 import Shop from "./pages/shop/shop";
 
 function App() {
-  const authCtx = useContext(ShopContext);
 
   return (
     <div>
