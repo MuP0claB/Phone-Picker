@@ -1,7 +1,7 @@
 import { PRODUCTS } from "../../products";
 
 import "./Shop.css";
-import Product from "./Product";
+import Product from "./product";
 
 const Shop = () => {
   return (
