@@ -3,13 +3,13 @@ import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import "./index.css";
-import { AuthContextProvider } from "./context/auth-context";
+import { ShopContextProvider } from "./context/shop-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <AuthContextProvider>
+  <ShopContextProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </AuthContextProvider>
+  </ShopContextProvider>
 );

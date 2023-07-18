@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { Route, Routes } from "react-router-dom";
 
-import AuthContext from "./context/auth-context";
-import NavBar from "./components/Layout/NavBar/NavBar";
+import ShopContext from "./context/shop-context";
+import NavBar from "./components/NavBar/NavBar";
 import Cart from "./pages/cart/Cart";
 import Shop from "./pages/shop/Shop";
 
 function App() {
-  const authCtx = useContext(AuthContext);
+  const authCtx = useContext(ShopContext);
 
   return (
     <div>
